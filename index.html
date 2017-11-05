@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dasmoto's Arts and Crafts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./resources/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./resources/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./resources/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="./resources/css/main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Kalam|Permanent+Marker" rel="stylesheet">
+    <link rel="icon" href="./resources/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div id="header">
+      <div class="container wide-nav-bar">
+        <div>
+          <h1>Dasmoto's Arts &amp Crafts</h1>
+        </div>
+        <nav>
+          <ul class="wide-nav">
+            <li class="wide-nav-item"><a href="#">Store Locator</a></li>
+            <li class="wide-nav-item"><a href="#">Contact</a></li>
+            <li class="wide-nav-item"><a href="#">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="thin-nav-btn">
+        <div class="fa-container"><div class="fa fa-bars"></div></div>
+
+        <ul class="thin-nav">
+          <li class="thin-nav-item"><a href="#">Store Locator</a></li>
+          <li class="thin-nav-item"><a href="#">Contact</a></li>
+          <li class="thin-nav-item"><a href="#">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-container">
+      <div id="about">
+        <div class="about-background"></div>
+        <div class="content">
+          <p>Dasmoto's provides the highest quality, authentic arts supplies directly to you. That way, you can get started as soon as inspiration strikes. </p>
+        </div>
+      </div>
+    </div>
+    <div class="product-bar-container">
+      <ul class="product-bar">
+        <li class="product-bar-cat">
+          <a href="#">Brushes</a>
+          <ul class="product-bar-items">
+            <li><a href="#">Hacksaw</a></li>
+            <li><a href="#">Sable</a></li>
+            <li><a href="#">Hog</a></li>
+            <li><a href="#">Synthetic</a></li>
+          </ul>
+        </li>
+        <li class="product-bar-cat">
+          <a href="#">Frames</a>
+          <ul class="product-bar-items">
+            <li><a href="#">Assorted</a></li>
+            <li><a href="#">Bespoke</a></li>
+          </ul>
+        </li>
+        <li class="product-bar-cat">
+          <a href="#">Paint</a>
+          <ul class="product-bar-items">
+            <li><a href="#">Watercolour</a></li>
+            <li><a href="#">Gouache</a></li>
+            <li><a href="#">Acrylic</a></li>
+            <li><a href="#">Oil</a></li>
+          </ul>
+        </li>
+        <li class="product-bar-cat">
+          <a href="#">Pens</a>
+          <ul class="product-bar-items">
+            <li><a href="#">Markers</a></li>
+            <li><a href="#">Ink</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div>
+    <div class="featured-container container">
+      <div id="brushes" class="featured-product">
+        <div class="content">
+          <h3 class="title">Hacksaw Brushes</h3>
+          <div class="images">
+            <img src="./resources/img/hacksaw.jpeg"/>
+            <img src="./resources/img/brushes.jpeg"/>
+            <img src="./resources/img/brushes2.jpeg"/>
+          </div>
+          <div class="content-text">
+
+            <p>Made of the highest quality oak, Hacksaw brushes are known for their weight and ability to hold paint in large amounts. Available in different sizes. <span class="price">Starting at £3.00 / brush.</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="frames" class="featured-product">
+        <div class="content">
+          <h3 class="title">Art Frames (assorted)</h3>
+          <div class="images">
+            <img src="./resources/img/frames.jpeg"/>
+            <img src="./resources/img/frames2.jpeg"/>
+          </div>
+          <div class="content-text">
+
+            <p>Assorted frames made of different material, including MDF, birchwood, and PDE. Select frames can be sanded and painted according to your needs. <span class="price">Starting at £2.00 / frame.</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="paint" class="featured-product">
+        <div class="content">
+          <h3 class="title">Clean Finnish Paint</h3>
+          <div class="images">
+            <img src="./resources/img/finnish.jpeg"/>
+            <img src="./resources/img/paints.jpg"/>
+          </div>
+          <div class="content-text">
+            <p>Imported paint from Finland. Over 256 colors available in-store, varying in quantity (1 oz. to 8 oz.). Clean Finnish paint microbinds to canvas, increasing the finish and longevity of any artwork. <span class="price">Starting at £5.00 / tube.</span></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer>
+      <ul>
+        <li>&copyDasmoto's Arts &amp Crafts</li>
+    </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="./resources/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="https://use.fontawesome.com/5357d5ad66.js"></script>
+    <script type="text/javascript" src="./resources/slick/slick.min.js"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+    $(document).ready(function(){
+      $('.thin-nav-btn').click(function() {
+        $(this).find('.thin-nav').slideToggle(500);
+      });
+      var $bar = $(".product-bar-cat");
+      var $items = $(".product-bar-items");
+
+      $items.hide();
+      $bar.show();
+
+      $bar.hover(function(){
+        $(this).find($items).stop().slideToggle();
+      });
+      //$('.product-bar-cat').hover(function() {
+      //  $(this).find('.product-bar-items').delay(300).slideDown(500);
+      //}
+    //);
+      $('.images').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        fade: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        adaptiveHeight: true,
+      });
+    });
+    //]]>
+  </script>
+  </body>
+</html>
